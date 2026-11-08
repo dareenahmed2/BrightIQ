@@ -1,0 +1,178 @@
+* { box-sizing: border-box; }
+:root {
+  --bg-top: #fff7d6;
+  --bg-mid: #dff9ff;
+  --bg-bottom: #f7e7ff;
+  --card: rgba(255,255,255,0.72);
+  --text: #2d3f63;
+  --muted: #536d95;
+  --shadow: 0 24px 60px rgba(124, 126, 248, 0.16);
+}
+html, body {
+  margin: 0;
+  min-height: 100vh;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 28px 0 16px;
+  place-items: center;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: radial-gradient(circle at top left, #fff9c4 0%, var(--bg-mid) 28%, var(--bg-top) 50%, var(--bg-bottom) 100%);
+  color: var(--text);
+}
+.page-shell {
+  width: min(760px, 92vw);
+  display: grid;
+  gap: 22px;
+}
+.site-footer {
+  width: min(760px, 92vw);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 13px 12px 0;
+  border-top: 1px solid rgba(139, 125, 163, 0.18);
+  color: #718095;
+  font-size: 0.78rem;
+}
+.site-footer strong { color: #a9527b; font-weight: 800; }
+.footer-spark { color: #e783aa; font-size: 1rem; }
+.footer-separator { color: #d184a2; }
+.profile-pill {
+  justify-self: center;
+  max-width: 80%;
+  overflow: hidden;
+  padding: 8px 16px;
+  border: 1px solid rgba(255,255,255,0.7);
+  border-radius: 999px;
+  background: #e6f5eb;
+  color: #355f4b;
+  font-weight: 700;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.brand-row {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  align-self: center;
+  padding: 12px 20px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.5);
+  box-shadow: 0 10px 30px rgba(102, 119, 255, 0.15);
+}
+.brand-mark {
+  width: 42px;
+  height: 42px;
+  display: block;
+  border-radius: 50%;
+  box-shadow: 0 5px 13px rgba(100, 91, 135, 0.14);
+}
+.brand-name {
+  font-size: clamp(1.4rem, 2vw, 2rem);
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  color: var(--text);
+}
+.card {
+  padding: 42px 26px;
+  text-align: center;
+  background: var(--card);
+  border: 1px solid rgba(255,255,255,0.5);
+  border-radius: 30px;
+  box-shadow: var(--shadow);
+}
+.eyebrow {
+  margin: 0 0 16px;
+  letter-spacing: 0.18em;
+  font-size: 0.74rem;
+  color: #7d8dff;
+  font-weight: 700;
+}
+h1 {
+  margin: 0 0 14px;
+  font-size: clamp(2.1rem, 4vw, 3.2rem);
+}
+#top-domain {
+  font-size: clamp(1.7rem, 4vw, 2.8rem);
+  font-weight: 900;
+  color: #ff8fab;
+  margin: 14px 0 2px;
+}
+#top-score {
+  color: var(--muted);
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+#result-text {
+  color: var(--muted);
+  line-height: 1.9;
+  margin: 0 auto 28px;
+  max-width: 540px;
+  font-size: 1.05rem;
+}
+.profile-note {
+  max-width: 560px;
+  margin: 0 auto 22px;
+  color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.6;
+}
+#intelligence-results {
+  display: grid;
+  gap: 12px;
+  max-width: 560px;
+  margin: 0 auto 28px;
+  text-align: left;
+}
+.domain-result {
+  display: grid;
+  grid-template-columns: minmax(150px, 1fr) 2fr auto;
+  align-items: center;
+  gap: 12px;
+  color: var(--text);
+  font-size: 0.88rem;
+}
+.domain-bar {
+  height: 10px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: #e7eef5;
+}
+.domain-bar span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #80cfae, #ef91b2);
+}
+.domain-score { min-width: 40px; text-align: right; font-weight: 700; }
+.primary-btn {
+  border: none;
+  padding: 18px 30px;
+  border-radius: 16px;
+  font-size: 1rem;
+  font-weight: 800;
+  cursor: pointer;
+  background: linear-gradient(135deg, #7c7ef8, #4cc9f0, #f9a8d4);
+  color: white;
+  box-shadow: 0 16px 30px rgba(124, 126, 248, 0.24);
+}
+@media (max-width: 560px) {
+  body { gap: 12px; padding: 20px 0 12px; }
+  .page-shell { width: 94vw; gap: 16px; }
+  .site-footer { width: 94vw; font-size: 0.72rem; }
+  .card { padding: 34px 20px; }
+  .brand-row { padding: 9px 15px; }
+  .brand-mark { width: 38px; height: 38px; }
+  h1 { font-size: clamp(1.9rem, 9vw, 2.7rem); }
+  .domain-result { grid-template-columns: minmax(120px, 1fr) 1fr auto; gap: 8px; font-size: 0.8rem; }
+  #result-text { font-size: 0.96rem; }
+  .primary-btn { width: min(100%, 300px); }
+}

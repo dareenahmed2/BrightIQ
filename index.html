@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BrightIQ | Intelligence Profile</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="stylesheet" href="home.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <div class="brand-row">
+        <img class="brand-mark" src="favicon.svg" alt="" />
+        <div class="brand-name">BrightIQ</div>
+      </div>
+
+      <div class="card">
+        <p class="eyebrow">MULTIPLE INTELLIGENCES</p>
+        <h1>Explore Your Strengths</h1>
+        <p class="subtitle">Answer 40 questions about what you enjoy and how you like to learn. See a profile across eight areas of intelligence. There are no right or wrong answers.</p>
+        <form id="profile-form" class="profile-form">
+          <div class="form-row">
+            <label for="player-name">Your name
+              <input id="player-name" name="name" type="text" maxlength="24" autocomplete="nickname" placeholder="Enter your name" required />
+            </label>
+            <label for="player-age">Your age
+              <input id="player-age" name="age" type="number" min="4" max="120" inputmode="numeric" placeholder="Age 4 or older" required />
+            </label>
+          </div>
+          <p id="age-hint" class="age-hint" aria-live="polite">Your age helps choose a suitable question level.</p>
+          <button id="start-btn" class="primary-btn" type="submit">Start Questionnaire <span aria-hidden="true">→</span></button>
+        </form>
+        <div class="stat-row">
+          <div class="stat-box"><span class="stat-number">40</span><span class="stat-label">Questions</span></div>
+          <div class="stat-box"><span class="stat-number">8</span><span class="stat-label">Intelligence areas</span></div>
+          <div class="stat-box"><span class="stat-number">4</span><span class="stat-label">Response options</span></div>
+        </div>
+        <p class="privacy-note">Your name and age stay in this browser and are not sent to a server.</p>
+      </div>
+    </div>
+    <footer class="site-footer">
+      <span class="footer-spark" aria-hidden="true">✦</span>
+      <span>Made by <strong>Darin Ahmed @</strong></span>
+      <span class="footer-separator" aria-hidden="true"></span>
+      <span>2026</span>
+    </footer>
+    <script src="home.js"></script>
+  </body>
+</html>
